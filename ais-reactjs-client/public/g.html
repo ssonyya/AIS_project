@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Car Error Management System</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Error Management System</h1>
+    
+    <label for="carSelect">Select car:</label>
+    <select id="carSelect">
+        <option value="" disabled selected>Select a car</option>
+        <!-- Здесь можно использовать скрипт для заполнения списка автомобилей из базы данных -->
+        <option value="car1">Car 1</option>
+        <option value="car2">Car 2</option>
+        <option value="car3">Car 3</option>
+    </select>
+    
+    <h2>Car Data</h2>
+    <table id="carData">
+        <!-- Здесь будет отображаться данные об выбранном автомобиле -->
+        <tr>
+            <th>Error Code</th>
+            <th>Error Description</th>
+            <th>Error Status</th>
+        </tr>
+    </table>
+    
+    <h2>Update Error Status</h2>
+    <label for="statusInput">Enter Status:</label>
+    <input type="text" id="statusInput">
+    <button onclick="updateStatus()">Update</button>
+    
+    <h2>Get Error Recommendation</h2>
+    <label for="statusInputRecommend">Enter Status:</label>
+    <input type="text" id="statusInputRecommend">
+    <button onclick="getRecommendation()">Get</button>
+    <p id="recommendation"></p>
+    
+    <h2>Add New Recommendation</h2>
+    <label for="recommendationInput">Enter Recommendation:</label>
+    <input type="text" id="recommendationInput" maxlength="100">
+    <button onclick="addRecommendation()">Add</button>
+    
+    <script>
+        function updateStatus() {
+            // Код для обновления статуса ошибки в базе данных
+        }
+        
+        function getRecommendation() {
+            // Код для получения рекомендации об ошибке из базы данных
+        }
+        
+        function addRecommendation() {
+            // Код для добавления новой рекомендации в базу данных
+        }
+    </script>
+</body>
+</html>
+
+
+<option disabled>Выберите</option>

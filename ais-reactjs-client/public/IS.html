@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS</title>
+    <link rel="stylesheet" href="../uikit/css/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Команда СМИВ</span>
+        </div>
+        <div id="about">
+            <a href="main.html" title="Текущий проект">Текущий проект</a>
+            <a href="finished_project.html" title="Готовые проекты">Готовые проекты</a>
+            <a href="index.html" title="Работа с БД">Работа с БД</a>
+            
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Концептуальное описание информационной системы</h1>
+
+            
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <span>Цели создания системы:</span><br/><br/>
+            <span>Создание информационной системы по отслеживанию технического состояния беспилотных автомобилей.</span>
+        </div>
+        <div class="text">
+            <span>Основные функциональные возможности системы:</span><br/><br/>
+            <span>1. Работа с бд (отслеживание характеристик авто).</span><br/><br/>
+            <span>2. Создание рекомендаций для автомобиля в случае возникновения неисправностей.</span>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else 
+                $("header").attr("class", "fixed");
+        });
+    </script>
+
+</body>
+</html>

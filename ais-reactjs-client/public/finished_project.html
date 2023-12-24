@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS</title>
+    <link rel="stylesheet" href="../uikit/css/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Команда СМИВ</span>
+        </div>
+        <div id="about">
+            <a href="main.html" title="Текущий проект">Текущий проект</a>
+            <a href="IS.html" title="Концептуальное описание ИС">Концептуальное описание ИС</a>
+            <a href="index.html" title="Работа с БД">Работа с БД</a>
+            
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Наши готовые проекты</h1>
+
+            
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Наш готовый проект</h2>
+        </div>
+        <div class="text">
+            <span>Данный сайт предназначен для того, чтобы пользователь мог подобрать интересующий его автомобиль с пробегом по заданным характеристикам. Cайт был выполнен в рамках проекта по предмету УПП.</span>
+        </div>
+    </div>
+
+    <div id="car" >
+        <img src="../uikit/images/finished_project1.jpg" />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else 
+                $("header").attr("class", "fixed");
+        });
+    </script>
+
+</body>
+</html>
